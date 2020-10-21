@@ -1,0 +1,81 @@
+<%- include(rootpath+'/partials/header') %>
+<div class="pokemon--details">
+    <img class="pokemon--card__img--detail" src="/img/<%= pokemon.pokemon_numero %>.png"
+        alt="<%= pokemon.pokemon_name %>">
+    <div class="pokemon--card pokemon--card--detail">
+        <h2 class="pokemon--card__name">#<%= pokemon.pokemon_numero %> <%= pokemon.pokemon_name %></h2>
+        <div class="pokemon--typeList">
+            <% for(type of types){ %><div class="pokemon--type" style="background-color: #<%= type.pokemon_color %>;">
+                <%= type.pokemon_type %></div><% } %>
+        </div>
+        <h3>Statistiques</h3>
+        <div class="pokemon--stats">
+            <span>PV</span><span><%= pokemon.pokemon_pv %></span>
+            <div class="pokemon--barstats">
+                <div
+                    style="background-color: white; flex-grow: <%= Math.floor(pokemon.pokemon_pv/255*100)/100 %>;height: 20px;">
+                </div>
+                <div
+                    style="background-color: black; flex-grow:<%= 1-Math.floor(pokemon.pokemon_pv/255 * 100)/100 %>;height: 20px;">
+                </div>
+            </div>
+        </div>
+        <div class="pokemon--stats">
+            <span>Attaque</span><span><%= pokemon.pokemon_attack %></span>
+            <div class="pokemon--barstats">
+                <div
+                    style="background-color: white; flex-grow: <%= Math.floor(pokemon.pokemon_attack/255*100)/100 %>;height: 20px;">
+                </div>
+                <div
+                    style="background-color: black; flex-grow:<%= 1-Math.floor(pokemon.pokemon_attack/255 * 100)/100 %>;height: 20px;">
+                </div>
+            </div>
+        </div>
+        <div class="pokemon--stats">
+            <span>Défense</span><span><%= pokemon.pokemon_defense %></span>
+            <div class="pokemon--barstats">
+                <div
+                    style="background-color: white; flex-grow: <%= Math.floor(pokemon.pokemon_defense/255*100)/100 %>;height: 20px;">
+                </div>
+                <div
+                    style="background-color: black; flex-grow:<%= 1-Math.floor(pokemon.pokemon_defense/255 * 100)/100 %>;height: 20px;">
+                </div>
+            </div>
+        </div>
+        <div class="pokemon--stats">
+            <span>Attaque Spé.</span><span><%= pokemon.pokemon_attack_spe %></span>
+            <div class="pokemon--barstats">
+                <div
+                    style="background-color: white; flex-grow: <%= Math.floor(pokemon.pokemon_attack_spe/255*100)/100 %>;height: 20px;">
+                </div>
+                <div
+                    style="background-color: black; flex-grow:<%= 1-Math.floor(pokemon.pokemon_attack_spe/255 * 100)/100 %>;height: 20px;">
+                </div>
+            </div>
+        </div>
+        <div class="pokemon--stats">
+            <span>Défense spé.</span><span><%= pokemon.pokemon_defense_spe %></span>
+            <div class="pokemon--barstats">
+                <div
+                    style="background-color: white; flex-grow: <%= Math.floor(pokemon.pokemon_defense_spe/255*100)/100 %>;height: 20px;">
+                </div>
+                <div
+                    style="background-color: black; flex-grow:<%= 1-Math.floor(pokemon.pokemon_defense_spe/255 * 100)/100 %>;height: 20px;">
+                </div>
+            </div>
+        </div>
+        <div class="pokemon--stats">
+            <span>Vitesse</span><span><%= pokemon.pokemon_vitesse %></span>
+            <div class="pokemon--barstats">
+                <div
+                    style="background-color: white; flex-grow: <%= Math.floor(pokemon.pokemon_vitesse/255*100)/100 %>;height: 20px;">
+                </div>
+                <div
+                    style="background-color: black; flex-grow:<%= 1-Math.floor(pokemon.pokemon_vitesse/255 * 100)/100 %>;height: 20px;">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<%- include(rootpath+'/partials/footer') %>

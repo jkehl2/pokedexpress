@@ -15,9 +15,6 @@ app.use(express.urlencoded({
   extended: true
 }));
 
-const helmet = require('helmet');
-app.use(helmet());
-
 const session = require('express-session');
 const secret = process.env.SESSPASSPHRASE;
 app.use(session({
@@ -26,7 +23,7 @@ app.use(session({
   resave: true,
   cookie: {
     secure: false,
-    httpOnly: true,
+    httpOnly: false,
     //  domain: 'example.com',
     //  path: 'foo/bar',
     maxAge: (1000 * 60 * 60)

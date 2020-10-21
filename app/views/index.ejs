@@ -1,3 +1,11 @@
 <%- include(rootpath+'/partials/header') %>
-
+<div class="pokemon--list">
+    <% for(pokemon of pokemon_list){ %>
+    <a class="pokemon--card" href="\pokemon\<%= pokemon.pokemon_id %>">
+            <img class="pokemon--card__img" src="/img/<%= pokemon.pokemon_numero %>.png"
+                alt="<%= pokemon.pokemon_name %>">
+            <p class="pokemon--card__name"><%= pokemon.pokemon_name %></p>
+    </a>
+    <% } %>
+</div>
 <%- include(rootpath+'/partials/footer') %>

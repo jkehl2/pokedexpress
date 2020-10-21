@@ -9,5 +9,6 @@ const controller_main = require('../controllers/controller_main');
 const router_main = express.Router();
 
 router_main.get('/', controller_main.homePage);
+router_main.get('/pokemon/:pokemonId', controller_main.getPokemon);
 
 module.exports = router_main;

@@ -38,7 +38,7 @@ header {
     color: white;
 }
 
-header a.home--link{
+header a.home--link {
     color: white;
     text-decoration: none;
 }
@@ -54,7 +54,7 @@ header h1 {
     width: fit-content;
 }
 
-header nav.nav--bar{
+header nav.nav--bar {
     flex-grow: 1;
 
     display: flex;
@@ -68,7 +68,7 @@ header nav.nav--bar{
     margin: 0 0.5rem;
 }
 
-header a.nav--link{
+header a.nav--link {
     padding: 0.5rem 0.75rem;
     margin: 0 0.5rem;
 
@@ -82,10 +82,10 @@ header a.nav--link{
     transition: color 250ms ease-out, border 250ms ease-out, background-color 250ms ease-out;
 }
 
-header a.nav--link:hover{
+header a.nav--link:hover {
     color: black;
     border: 1px solid black;
-    background-color: white;    
+    background-color: white;
 }
 
 footer {
@@ -118,34 +118,35 @@ main {
     margin: 0;
 
     width: 75%;
-    min-width: max-content;
 }
 
-div.message{
+div.message {
     width: 100%;
 
     font-weight: normal;
     font-size: 0.90rem;
-    
+
     padding: 0.5rem 0;
 
     text-align: center;
     background-color: #cbd5dd;
 }
-div.message--error{
+
+div.message--error {
     color: red;
 }
-div.message--info{
+
+div.message--info {
     color: blue;
 }
 
-.h1__texthighlight{
+.h1__texthighlight {
     width: 100%;
     text-align: center;
     text-transform: capitalize;
     font-family: monospace;
     font-size: 0.95rem;
-    color:gray;
+    color: gray;
 }
 
 main h1 {
@@ -173,7 +174,7 @@ form {
 
     padding: 1rem 2rem;
     margin: 1rem 0;
-    
+
     width: 100%;
     max-width: 640px;
     min-width: max-content;
@@ -201,6 +202,7 @@ form {
     font-weight: bold;
     font-size: 1rem;
 }
+
 .form--label {
     padding: 0 0 0.5rem 0;
 
@@ -208,6 +210,7 @@ form {
     font-size: 0.95rem;
     color: #24292e;
 }
+
 .form--label--required:after {
     padding-left: 0.25rem;
     font-size: 0.75rem;
@@ -230,8 +233,9 @@ form {
     padding: 0.25rem;
     width: 100%;
 
-    transition:  border 250ms ease-out;
+    transition: border 250ms ease-out;
 }
+
 .form--input:focus {
     border: 1px solid #0366d6;
     box-shadow: none;
@@ -252,13 +256,162 @@ form {
     border: 1px solid black;
     background-color: white;
 
-    transition:  box-shadow 250ms ease-out;
+    transition: box-shadow 250ms ease-out;
 }
+
 .form--submit:hover {
     box-shadow: 1px 1px 1px black;
 }
+
 .form--submit:focus {
     background-color: white;
     border: 1px solid #0366d6;
     outline: none;
+}
+
+/* POKEMON CARD AND DETAILS */
+.pokemon--list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    justify-content: space-around;
+    align-content: space-between;
+    align-items: flex-start;
+
+    width: 100%;
+}
+
+.pokemon--details {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    justify-content: center;
+    align-content: space-between;
+    align-items: center;
+
+    width: 100%;
+    height: fit-content;
+}
+
+.pokemon--card {
+    box-sizing: border-box;
+    border: 3px solid lightgray;
+    border-radius: 1rem;
+
+    padding: 1rem;
+    margin: 0.5rem;
+
+    background-color: crimson;
+
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+
+    justify-content: space-between;
+    align-content: space-between;
+    align-items: center;
+
+    width: fit-content;
+    height: fit-content;
+
+    color: black;
+    text-decoration: none;
+}
+
+.pokemon--card--detail {
+
+    justify-content: space-between;
+    align-content: space-between;
+    align-items: flex-start;
+
+    flex-grow: 1;
+    height: fit-content;
+    margin: 0 0 0 1rem;
+    padding: 1rem;
+
+    min-width: 500px;
+}
+
+.pokemon--card--detail h2 {
+    font-size: 1.5rem;
+    color: white;
+}
+
+.pokemon--card--detail h3 {
+    font-size: 1.2rem;
+    color: white;
+}
+
+.pokemon--card__img {
+    display: block;
+    width: 150px;
+    height: 150px;
+}
+
+.pokemon--card__img--detail {
+    display: block;
+    height: 70%;
+    max-height: 50vh;
+}
+
+.pokemon--card__name {
+    font-size: 0.9rem;
+    font-weight: bold;
+    text-transform: capitalize;
+    text-shadow: 0.2px 0.2px 0.5px lightgray;
+    color: white;
+}
+
+.pokemon--typeList {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    justify-content: flex-start;
+    align-content: space-around;
+    align-items: center;
+
+    width: 100%;
+}
+
+.pokemon--type {
+    color: white;
+    font-weight: bold;
+    padding: 0.5rem;
+    margin: 0 0.5rem;
+
+    border-radius: 0.5rem;
+}
+
+.pokemon--stats {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+
+    justify-content: space-between;
+    align-content: space-around;
+    align-items: center;
+
+    box-sizing: border-box;
+    width: 100%;
+    margin: 0.5rem 0;
+
+    color: white;
+}
+
+.pokemon--barstats {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+
+    justify-content: flex-start;
+    align-content: flex-start;
+    align-items: center;
+
+    width: 50%;
+    height: 20px;
+
+    border-radius: 0.5rem;
 }
